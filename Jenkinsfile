@@ -23,7 +23,7 @@ node {
     }
 
     stage('Trigger deployment') {
-        agent any
+       //: agent any
         environment {
             def GIT_COMMIT = "${env.GIT_COMMIT}"
         }
