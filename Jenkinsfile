@@ -8,7 +8,7 @@ node {
     stage('Update GIT') {
         script {
             catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                withCredentials([string(credentialsId: 'github-auth-token', variable: 'GIT_TOKEN')]) {
+                withCredentials([string(credentialsId: 'github-secret-token', variable: 'GIT_TOKEN')]) {
                     sh "git config user.email ettynan@gmail.com"
                     sh "git config user.name ettynan"
                     sh "cat vote-ui-deployment.yaml"
