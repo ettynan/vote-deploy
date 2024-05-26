@@ -16,7 +16,7 @@ node {
                     sh "cat vote-ui-deployment.yaml"
                     sh "git status" // Add this line to check the status
                     sh "git add ."
-                    sh "git commit -m 'Done by Jenkins Jobs deployment: ${env.BUILD_NUMBER}'"
+                    sh "git commit -m 'Done by Jenkins Job deployment: ${env.BUILD_NUMBER}'"
                     sh "git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/${GIT_USERNAME}/vote-deploy.git HEAD:main"
                 }
             }
